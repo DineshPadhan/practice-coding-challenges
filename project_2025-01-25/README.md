@@ -1,0 +1,25 @@
+# Daily Coding Challenge - 2025-01-25
+
+**Question #23:** Write a Python program to find the union of two lists.
+
+**Solution:** Check `solution.py` for the Python implementation.
+
+**Generated:** 2025-07-22 15:40:15
+
+## Code Preview
+```python
+def find_union(list1, list2):
+    union_list = []
+    for item in list1:
+        if item not in union_list:
+            union_list.append(item)
+    for item in list2:
+        if item not in union_list:
+            union_list.append(item)
+    return union_list
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [3, 5, 6, 7, 8]
+union = find_union(list1, list2)
+print(f"The union of {list1} and {list2} is: {union}")
+```
