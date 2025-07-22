@@ -1,0 +1,50 @@
+# Daily Coding Challenge - 2025-01-22
+
+**Question #20:** Write a Python program to check if a string is an anagram of another string.
+
+**Solution:** Check `solution.py` for the Python implementation.
+
+**Generated:** 2025-07-22 15:39:57
+
+## Code Preview
+```python
+def is_anagram(str1, str2):
+    str1 = str1.lower()
+    str2 = str2.lower()
+
+    # Check if the lengths of the strings are different
+    if len(str1) != len(str2):
+        return False
+
+    # Create dictionaries to store the character counts of each string
+    char_count1 = {}
+    char_count2 = {}
+
+    # Count the occurrences of each character in str1
+    for char in str1:
+        char_count1[char] = char_count1.get(char, 0) + 1
+
+    # Count the occurrences of each character in str2
+    for char in str2:
+        char_count2[char] = char_count2.get(char, 0) + 1
+
+    # Compare the character counts of the two strings
+    return char_count1 == char_count2
+
+# Example usage
+string1 = "listen"
+string2 = "silent"
+
+if is_anagram(string1, string2):
+    print(f"'{string1}' and '{string2}' are anagrams.")
+else:
+    print(f"'{string1}' and '{string2}' are not anagrams.")
+
+string3 = "hello"
+string4 = "world"
+
+if is_anagram(string3, string4):
+    print(f"'{string3}' and '{string4}' are anagrams.")
+else:
+    print(f"'{string3}' and '{string4}' are not anagrams.")
+```
