@@ -1,0 +1,40 @@
+# Daily Coding Challenge - 2025-01-17
+
+**Question #15:** Write a Python program to find the second largest number in a list.
+
+**Solution:** Check `solution.py` for the Python implementation.
+
+**Generated:** 2025-07-22 15:39:18
+
+## Code Preview
+```python
+def find_second_largest(numbers):
+    if len(numbers) < 2:
+        return None  # Not enough numbers for a second largest
+
+    # Remove duplicates and sort in descending order
+    unique_numbers = sorted(list(set(numbers)), reverse=True)
+
+    if len(unique_numbers) < 2:
+        return unique_numbers[0] #Only one unique number
+    else:
+        return unique_numbers[1] 
+
+#example
+number_list = [1, 5, 2, 8, 3, 9, 1, 5, 8]
+second_largest = find_second_largest(number_list)
+print(f"The second largest number is: {second_largest}")
+
+number_list = [1,1,1,1]
+second_largest = find_second_largest(number_list)
+print(f"The second largest number is: {second_largest}")
+
+number_list = [1]
+second_largest = find_second_largest(number_list)
+print(f"The second largest number is: {second_largest}")
+
+number_list = [1,2]
+second_largest = find_second_largest(number_list)
+print(f"The second largest number is: {second_largest}")
+
+```
